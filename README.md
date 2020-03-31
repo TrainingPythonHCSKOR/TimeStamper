@@ -40,6 +40,4 @@ Working Time 은 Start Time과 End Time의 차이를 기록합니다.
 
 ## ChangeLog
 
-TimeStamper.exe 
-
 
