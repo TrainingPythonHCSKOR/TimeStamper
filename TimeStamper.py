@@ -68,7 +68,7 @@ def TimeCheck():
 # Generate Excel Sheet Format
 def MakeTemplit(xlFile,sheetName,sheetExist):
 	if sheetExist == 0:
-		defaultSheet = xlFile.createSheet(sheetName)
+		defaultSheet = xlFile.create_sheet(sheetName)
 	else:
 		defaultSheet = xlFile.active
 		defaultSheet.title = sheetName 
@@ -109,7 +109,9 @@ def WriteToExcel(now):
     for i in range(len(xlFile.sheetnames)):
         if str(xlFile.sheetnames[i]) == sheetName:
             sheetExist = 1
-            break
+            #break
+        else:
+            sheetExist = 0
     # end for
 	
     if sheetExist:
